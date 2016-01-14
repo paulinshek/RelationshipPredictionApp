@@ -20,7 +20,7 @@ dashboardPage(
     tabItems(
       tabItem(tabName = "prepopulated","Hi, prepopulated goes here"),
       tabItem(tabName = "survey", 
-              uiOutput(textOutput(outputId = "hearts"))
+              uiOutput(outputId = "hearts")
               )
     )
     

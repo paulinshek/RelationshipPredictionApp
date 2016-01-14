@@ -39,7 +39,7 @@ shinyServer(function(input, output) {
   
   ### actual script starts here
   heartCount <- round(predictProbs(input$something) * 100)
-  output$hearts <- renderUI(makeHeartsPlot(heartCount), quoted = TRUE) # FIX ME
+  output$hearts <- renderUI(HTML(makeHeartsPlot(heartCount))) 
 
   
   
