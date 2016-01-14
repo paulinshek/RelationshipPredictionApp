@@ -6,6 +6,7 @@
 #
 
 library(shinydashboard)
+library(shiny)
 
 dashboardPage(
   dashboardHeader(title = "Explore our analysis here"),
@@ -13,13 +14,14 @@ dashboardPage(
     sidebarMenu(
       menuItem("See some prepopulated surveys", tabName = "prepopulated"),
       menuItem("Answer the survey yourself!", tabName = "survey")
-      
     )
   ),
   dashboardBody(
     tabItems(
       tabItem(tabName = "prepopulated","Hi, prepopulated goes here"),
-      tabItem(tabName = "survey", "Hi, survey and results goes here")
+      tabItem(tabName = "survey", 
+              uiOutput(textOutput(outputId = "hearts"))
+              )
     )
     
   )
